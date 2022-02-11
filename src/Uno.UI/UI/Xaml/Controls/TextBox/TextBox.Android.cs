@@ -313,6 +313,18 @@ namespace Windows.UI.Xaml.Controls
 			}
 		}
 
+		public string SelectedText
+		{
+			get
+			{
+				if (_textBoxView != null)
+				{
+					return _textBoxView.Text.Substring(SelectionStart, SelectionLength);
+				}
+				return string.Empty;
+			}
+		}
+
 		private InputTypes AdjustInputTypes(InputTypes inputType, InputScope inputScope)
 		{
 			inputType = InputScopeHelper.ConvertToCapitalization(inputType, inputScope);

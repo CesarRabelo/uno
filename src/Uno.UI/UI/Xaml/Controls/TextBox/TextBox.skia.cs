@@ -44,6 +44,10 @@ namespace Windows.UI.Xaml.Controls
 			set => Select(SelectionStart, value);
 		}
 
+		public string SelectedText
+		{
+			get => Text.Substring(SelectionStart, SelectionLength) ?? string.Empty;
+		}
 
 		protected void SetIsPassword(bool isPassword) => TextBoxView?.SetIsPassword(isPassword);
 	}
