@@ -323,6 +323,19 @@ namespace Windows.UI.Xaml.Controls
 				}
 				return string.Empty;
 			}
+			set
+			{
+				if (_textBoxView != null)
+				{
+					int index = _textBoxView.Text.IndexOf(value);
+					if (index >= 0)
+					{
+						SelectionLength = value.Length;
+						SelectionStart = index;
+						SelectPartial(index, value.Length);
+					}
+				}
+			}
 		}
 
 		private InputTypes AdjustInputTypes(InputTypes inputType, InputScope inputScope)

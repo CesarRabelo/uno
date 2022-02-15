@@ -47,6 +47,7 @@ namespace Windows.UI.Xaml.Controls
 		public string SelectedText
 		{
 			get => Text.Substring(SelectionStart, SelectionLength) ?? string.Empty;
+			set => Select(start: Text.IndexOf(value), length: value.Length);
 		}
 
 		protected void SetIsPassword(bool isPassword) => TextBoxView?.SetIsPassword(isPassword);
