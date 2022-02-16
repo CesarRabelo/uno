@@ -251,6 +251,19 @@ namespace Windows.UI.Xaml.Controls
 			}
 		}
 
+		public string SelectedText
+		{
+			get
+			{
+				if (_textBoxView != null)
+				{
+					var objTextRange = _textBoxView.GetTextRange(this.SelectionStart, this.SelectionLength);
+					return objTextRange.Description;
+				}
+				return string.Empty;
+			}
+		}
+
 		protected void SetSecureTextEntry(bool isSecure)
 		{
 			if (_textBoxView != null)
