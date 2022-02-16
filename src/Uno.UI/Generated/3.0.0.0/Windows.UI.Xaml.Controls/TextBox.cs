@@ -12,7 +12,7 @@ namespace Windows.UI.Xaml.Controls
 		// Skipping already declared property Text
 		// Skipping already declared property SelectionStart
 		// Skipping already declared property SelectionLength
-		#if false || __IOS__ || NET461 || __WASM__ || false || __NETSTD_REFERENCE__ || __MACOS__
+		#if false || false || NET461 || __WASM__ || false || __NETSTD_REFERENCE__ || __MACOS__
 		[global::Uno.NotImplemented("__ANDROID__", "__IOS__", "NET461", "__WASM__", "__SKIA__", "__NETSTD_REFERENCE__", "__MACOS__")]
 		public  string SelectedText
 		{
